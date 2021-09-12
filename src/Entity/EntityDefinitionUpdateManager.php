@@ -82,17 +82,17 @@ class EntityDefinitionUpdateManager implements ContainerInjectionInterface {
    */
   public function __construct(
     EntityDefinitionUpdateManagerInterface $entity_definition_update_manager,
-    EntityLastInstalledSchemaRepositoryInterface $entity_last_installed_schema_repository,
     EntityTypeManagerInterface $entity_type_manager,
+    EntityLastInstalledSchemaRepositoryInterface $entity_last_installed_schema_repository,
     EntityTypeListenerInterface $entity_type_listener,
     EntityFieldManagerInterface $entity_field_manager,
     FieldStorageDefinitionListenerInterface $field_storage_definition_listener
   ) {
     $this->entityDefinitionUpdateManager = $entity_definition_update_manager;
-    $this->entityLastInstalledSchemaRepository = $entity_last_installed_schema_repository;
     $this->entityTypeManager = $entity_type_manager;
-    $this->entityTypeListener = $entity_type_listener;
+    $this->entityLastInstalledSchemaRepository = $entity_last_installed_schema_repository;
     $this->entityFieldManager = $entity_field_manager;
+    $this->entityTypeListener = $entity_type_listener;
     $this->fieldStorageDefinitionListener = $field_storage_definition_listener;
   }
 

@@ -19,9 +19,13 @@
   "require": {
     "drupal/core": "~8.9 || ~9.0"
   },
+  "extra": {
+    "branch-alias": {
+      "dev-1.0.x": "1.0.x-dev"
+    },
+    "class": "Vardot\\Entity\\EntityDefinitionUpdateManager"
+  },
   "autoload": {
-    "psr-0": {
-      "Vardot": "src/"
-    }
+    "psr-4": { "Vardot": "src" }
   }
 }

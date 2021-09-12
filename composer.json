@@ -14,7 +14,7 @@
   ],
   "support": {
     "issues": "https://github.com/Vardot/entity-definition-update-manager/issues",
-    "source": "git@github.com:Vardot/entity-definition-update-manager.git"
+    "source": "https://github.com/Vardot/entity-definition-update-manager.git"
   },
   "require": {
     "drupal/core": "~8.9 || ~9.0"

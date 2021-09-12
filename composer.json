@@ -26,6 +26,6 @@
     "class": "Vardot\\Entity\\EntityDefinitionUpdateManager"
   },
   "autoload": {
-    "psr-4": { "Vardot": "src" }
+    "psr-4": { "Vardot\\Entity\\": "src/Entity/" }
   }
 }

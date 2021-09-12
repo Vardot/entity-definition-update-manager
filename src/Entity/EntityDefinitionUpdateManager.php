@@ -116,7 +116,7 @@ class EntityDefinitionUpdateManager implements ContainerInjectionInterface {
    */
   public function applyUpdates() {
 
-    $complete_change_list = $this->entityDefinitionUpdateManager->getChangeList();
+    $complete_change_list = \Drupal::entityDefinitionUpdateManager()->getChangeList();
 
     if ($complete_change_list) {
       // In case there are changes, explicitly invalidate caches.

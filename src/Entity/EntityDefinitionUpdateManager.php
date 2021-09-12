@@ -115,18 +115,15 @@ class EntityDefinitionUpdateManager implements ContainerInjectionInterface {
    * Applies all the detected valid changes.
    */
   public function applyUpdates() {
-    // Ensure this works also on Drupal 8.6 and earlier.
-    $reflector = new \ReflectionMethod($this->entityDefinitionUpdateManager, 'getChangeList');
-    $reflector->setAccessible(TRUE);
-    $complete_change_list = $reflector->invoke($this->entityDefinitionUpdateManager);
+
+    $complete_change_list = $this->entityDefinitionUpdateManager->getChangeList();
 
     if ($complete_change_list) {
-      // EntityDefinitionUpdateManagerInterface::getChangeList() only disables
-      // the cache and does not invalidate. In case there are changes,
-      // explicitly invalidate caches.
+      // In case there are changes, explicitly invalidate caches.
       $this->entityTypeManager->clearCachedDefinitions();
       $this->entityFieldManager->clearCachedFieldDefinitions();
     }
+
     foreach ($complete_change_list as $entity_type_id => $change_list) {
       // Process entity type definition changes before storage definitions ones
       // this is necessary when you change an entity type from non-revisionable

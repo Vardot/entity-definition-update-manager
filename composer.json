@@ -20,6 +20,8 @@
     "drupal/core": "~8.9 || ~9.0"
   },
   "autoload": {
-    "psr-4": { "Vardot": "src/" }
+    "psr-0": {
+      "Vardot": "src/"
+    }
   }
 }

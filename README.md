@@ -18,13 +18,19 @@ User deprecated function: `EntityDefinitionUpdateManagerInterface::applyUpdates(
 
 Customized class for the entity definition update manager.
 
-### 1. Require the Package in Your Module or Project
+### Require the Package in your root composer.json file
+
+```
+  "vardot/entity-definition-update-manager": "~1.0"
+```
+
+### or Require the Package in Project with a command
 
 ```
 $ composer require vardot/entity-definition-update-manager:~1.0
 ```
 
-### 2. Add Needed Namespace
+### 1. Add Needed Namespace
 
 Add the following name space at in custom modules or custom installation profiles.
 
@@ -32,11 +38,11 @@ Add the following name space at in custom modules or custom installation profile
 use Vardot\Entity\EntityDefinitionUpdateManager;
 ```
 
-### 3. Do Any Type of Configuration Import or Updates
+### 2. Do Any Type of Configuration Import or Updates
 
 Import or update configs in hook install or hook update, or any post install or post update.
 
-### 4. Run the Class Resolver for the Instance From the Definition Class
+### 3. Run the Class Resolver for the Instance From the Definition Class
 
 ```
   // Entity updates to clear up any mismatched entity and/or field definitions

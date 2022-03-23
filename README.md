@@ -24,7 +24,7 @@ Customized class for the entity definition update manager.
   "vardot/entity-definition-update-manager": "~1.0"
 ```
 
-### or Require the Package in Project with a command
+### Or require the Package in your Project with a command
 
 ```
 $ composer require vardot/entity-definition-update-manager:~1.0

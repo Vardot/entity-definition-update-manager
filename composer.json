@@ -17,7 +17,7 @@
     "source": "https://github.com/Vardot/entity-definition-update-manager.git"
   },
   "require": {
-    "drupal/core": "~8.9 || ~9.0"
+    "drupal/core": "~8.9 || ~9.0 || ~10"
   },
   "extra": {
     "branch-alias": {
